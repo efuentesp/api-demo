@@ -5,8 +5,15 @@
 
 module REA
 
-	class Resource
-		attr_accessor :id, :name, :value
-	end
+  class Resource
+    attr_accessor :id, :name, :value
+
+    def initialize args
+      args.each do |k,v|
+        instance_variable_set("@#{k}", v) unless v.nil?
+      end
+    end
+
+  end
 
 end

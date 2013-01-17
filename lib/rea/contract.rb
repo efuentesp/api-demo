@@ -8,8 +8,8 @@
 
 module REA
 
-	class Contract
-		attr_accessor :id, :increment_commitments, :decrement_commitments
-	end
+  class Contract
+    attr_accessor :id, :increment_commitments, :decrement_commitments
+  end
 
 end

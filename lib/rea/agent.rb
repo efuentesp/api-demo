@@ -6,8 +6,15 @@
 
 module REA
 
-	class Agent
-		attr_accessor :id, :name
-	end
+  class Agent
+    attr_accessor :id, :name
+
+    def initialize args
+      args.each do |k,v|
+        instance_variable_set("@#{k}", v) unless v.nil?
+      end
+    end
+
+  end
 
 end
